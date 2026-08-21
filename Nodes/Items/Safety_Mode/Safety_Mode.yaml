@@ -1,0 +1,12 @@
+Name: Safety Mode
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=02e979e4235860214e9b573883df2322
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=29280274a88ec2e2602d132389c5db62
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=738d40d00db37f60a1b399ee94129c2a

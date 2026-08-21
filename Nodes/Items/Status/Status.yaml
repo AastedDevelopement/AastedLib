@@ -1,0 +1,7 @@
+Name: Status
+Type: FolderType
+Children:
+- File: Feedback_Indicator/Feedback_Indicator.yaml
+- File: Output_field/Output_field.yaml
+- File: Shift_Register/Shift_Register.yaml
+- File: Value_State/Value_State.yaml

@@ -1,0 +1,9 @@
+Name: Controls
+Type: FolderType
+Children:
+- File: Input_fields/Input_fields.yaml
+- File: Input_fields_with_stepper/Input_fields_with_stepper.yaml
+- File: Switches/Switches.yaml
+- File: Navigation/Navigation.yaml
+- File: Time_Input/Time_Input.yaml
+- File: Checkbox/Checkbox.yaml

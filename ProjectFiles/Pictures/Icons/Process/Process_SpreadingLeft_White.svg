@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Process / Process_SpreadingLeft_White</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons-/-Process-/-Process_SpreadingLeft_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(16.000000, 16.500000) scale(-1, 1) translate(-16.000000, -16.500000) translate(1.000000, 5.000000)">
+            <path d="M0,10 L4.75,10 C5.30228475,10 5.75,10.4477153 5.75,11 L5.75,11 C5.75,11.5522847 5.30228475,12 4.75,12 L0,12 L0,10 Z" id="Rectangle-10" fill="#FFFFFF"></path>
+            <rect id="Rectangle-10" fill="#FFFFFF" transform="translate(7.762472, 5.516793) rotate(-60.000000) translate(-7.762472, -5.516793) " x="1.96957879" y="4.51679269" width="11.5857864" height="2"></rect>
+            <rect id="Rectangle-10" fill="#FFFFFF" transform="translate(7.762472, 16.516793) scale(1, -1) rotate(-60.000000) translate(-7.762472, -16.516793) " x="1.96957879" y="15.5167927" width="11.5857864" height="2"></rect>
+            <rect id="Rectangle-11" fill="#FFFFFF" x="10" y="0" width="20" height="2"></rect>
+            <rect id="Rectangle-11" fill="#FFFFFF" x="10" y="20" width="20" height="2"></rect>
+            <path d="M20,17.0828922 L20,4.91264076 L18.3771069,6.53553391 L17.6700001,5.82842712 L19.7906602,3.70776701 L19.79,3.70710678 L20.4971067,3 L20.497767,3.00066023 L20.4984272,3 L21.205534,3.70710678 L21.2048738,3.70776701 L23.3255339,5.82842712 L22.6184271,6.53553391 L21,4.91710682 L21,17.0784262 L22.6184271,15.4599991 L23.3255339,16.1671059 L21.2048738,18.287766 L21.205534,18.2884262 L20.4984272,18.995533 L20.497767,18.9948728 L20.4971067,18.995533 L19.79,18.2884262 L19.7906602,18.287766 L17.6700001,16.1671059 L18.3771069,15.4599991 L20,17.0828922 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            <path d="M8.57594729,11 L11.502024,16.1180445 L11.502024,5.88195551 L8.57594729,11 Z" id="Path-15" stroke="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

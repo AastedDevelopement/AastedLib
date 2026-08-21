@@ -1,0 +1,12 @@
+Name: Template
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=c8a4fc1b59a4795204f86d3309e697af
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=50716a855d5698238c03fd9acfec6915
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=d6ef8b653ac9bebe1f16ca693a2904a2

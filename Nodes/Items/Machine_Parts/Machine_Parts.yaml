@@ -1,0 +1,9 @@
+Name: Machine Parts
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=6015c1ae721db49f4feed5666ef12e36
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=4a83341dac2121173af4f9ce94153cbb

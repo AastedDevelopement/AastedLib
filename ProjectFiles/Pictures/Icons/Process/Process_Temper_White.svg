@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Process / Process_Temper_White</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons-/-Process-/-Process_Temper_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22,25.0828922 L22,6.91264076 L20.3771069,8.53553391 L19.6700001,7.82842712 L21.7906602,5.70776701 L21.79,5.70710678 L22.4971067,5 L22.497767,5.00066023 L22.4984272,5 L23.205534,5.70710678 L23.2048738,5.70776701 L25.3255339,7.82842712 L24.6184271,8.53553391 L23,6.91710682 L23,25.0784262 L24.6184271,23.4599991 L25.3255339,24.1671059 L23.2048738,26.287766 L23.205534,26.2884262 L22.4984272,26.995533 L22.497767,26.9948728 L22.4971067,26.995533 L21.79,26.2884262 L21.7906602,26.287766 L19.6700001,24.1671059 L20.3771069,23.4599991 L22,25.0828922 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        <path d="M10,7 L10,18.9312358 L9.54617429,19.2271369 C8.2789761,20.0533689 7.5,21.4595669 7.5,23 C7.5,25.4852814 9.51471863,27.5 12,27.5 C14.4852814,27.5 16.5,25.4852814 16.5,23 C16.5,21.4595669 15.7210239,20.0533689 14.4538257,19.2271369 L14,18.9312358 L14,7 C14,5.8954305 13.1045695,5 12,5 C10.8954305,5 10,5.8954305 10,7 Z" id="Oval" stroke="#FFFFFF" stroke-width="2"></path>
+        <circle id="Oval-7" fill="#FFFFFF" cx="12" cy="23" r="2"></circle>
+    </g>
+</svg>

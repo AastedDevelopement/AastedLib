@@ -1,0 +1,36 @@
+Name: Shift Register
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=249083d1fdf6f0d92e3322b18f57ba75
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=ba6bd768d32719a771b2e4957734b48e
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=7efdaf3a23485239a421b584f1179d55
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=e415f0c8d290013026f285589af376a2
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=0df3afaacdfb9777247f887933d1c7d4
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=4cb9857d028d2581de5331f9f28ebc91
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=b1a8d9745fcf6464353b91b993af1e47
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=3a753d4d7ef8a10dd390ffaebc710707
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=3f1608ecde2b57388abb340c35eafb95
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=07f4521208d74054fa54d31ebb206731
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=7f16f1e7257e40d2a8febcd63a397f8d

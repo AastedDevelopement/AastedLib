@@ -1,0 +1,6 @@
+Name: Type
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=692fa425eba345a9404371baa99fdd5c

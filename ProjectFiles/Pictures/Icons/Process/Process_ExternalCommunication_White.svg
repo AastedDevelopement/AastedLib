@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Process / Process_ExternalCommunication_White</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons-/-Process-/-Process_ExternalCommunication_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5,24 L8,24 L8,9 L5,9 L5,7 L9,7 C9.55228475,7 10,7.44771525 10,8 L10,25 C10,25.5522847 9.55228475,26 9,26 L5,26 L5,24 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        <path d="M20.2426407,11.2928932 L22.5355339,13.5857864 L21.1213203,15 L16,9.87867966 C16.6133344,9.26534523 17.5259175,9.13364425 18.267767,9.48357671 L18.267767,9.29289322 L26.363961,9.29289322 L26.363961,11.2928932 L20.2426407,11.2928932 Z" id="Combined-Shape-Copy" fill="#FFFFFF" transform="translate(21.181981, 12.146447) rotate(180.000000) translate(-21.181981, -12.146447) "></path>
+        <rect id="Rectangle-43" fill="#FFFFFF" x="13" y="13" width="2" height="2"></rect>
+        <path d="M16.8786797,20 L19.1715729,22.2928932 L17.7573593,23.7071068 L12.636039,18.5857864 C13.2493734,17.972452 14.1619565,17.840751 14.9038059,18.1906835 L14.9038059,18 L23,18 L23,20 L16.8786797,20 Z" id="Combined-Shape-Copy" fill="#FFFFFF"></path>
+        <rect id="Rectangle-43" fill="#FFFFFF" transform="translate(25.000000, 19.000000) rotate(-180.000000) translate(-25.000000, -19.000000) " x="24" y="18" width="2" height="2"></rect>
+    </g>
+</svg>

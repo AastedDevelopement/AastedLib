@@ -1,0 +1,15 @@
+Name: AllCAMs
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=ac1fa28aee9cab3eb824610907d53f24
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=cca0335c3af9d3f772898f93168bdb3d
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=a03744101ffa1a83c89de5b6c2b66c10
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=07b8e72dd8ef1d8e3e00238c67baf0a3

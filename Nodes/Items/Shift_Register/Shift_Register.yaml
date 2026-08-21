@@ -1,0 +1,15 @@
+Name: Shift Register
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=cb3230d2d3c0640bd5a068fe59407668
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=5b3a16ab599e6380d4a5774e9cd50f29
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=efe9d2deca06cc239ff6720187c7e29b
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=e5755f78141874045be1ef85e9b48e37

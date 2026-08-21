@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / ValueState / ValueState_RampingDown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons-/-ValueState-/-ValueState_RampingDown" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Mask" stroke-opacity="0.399937726" stroke="#515151" fill="#FFFFFF" cx="12" cy="12" r="11.5"></circle>
+        <path d="M5.39339828,6.80761184 L6.80761184,5.39339828 L13,11.5857864 L13,7 L15,7 L15,15 L7,15 L7,13 L11.5857864,13 L5.39339828,6.80761184 Z M17.5,19 C16.6715729,19 16,18.3284271 16,17.5 C16,16.6715729 16.6715729,16 17.5,16 C18.3284271,16 19,16.6715729 19,17.5 C19,18.3284271 18.3284271,19 17.5,19 Z" id="Combined-Shape" fill="#515151" fill-rule="nonzero"></path>
+    </g>
+</svg>

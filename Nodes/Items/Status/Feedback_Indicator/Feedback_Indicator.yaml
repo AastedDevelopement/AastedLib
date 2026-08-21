@@ -1,0 +1,6 @@
+Name: Feedback Indicator
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=bc8433dfaf1560127528a3d23c7bf722

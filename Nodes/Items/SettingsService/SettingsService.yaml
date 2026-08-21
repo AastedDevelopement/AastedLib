@@ -1,0 +1,21 @@
+Name: SettingsService
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=86fdef7f8802282ccb29cfb47a2e22c9
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=9fa58148caf9d881b059a5660e63483c
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=aa1d0ef74db0348c05aecb6d82c7189b
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=d2b4b3d87cac0853fb19265765c30373
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=e8ae478d2a6a103f9e5da8fa41d71b54
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=c212e0f540b7e491dac933899a3598d0

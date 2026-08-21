@@ -1,0 +1,9 @@
+Name: Switches
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=a64e98a0290a4c6f9bfcf0a30956fbe4
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=609b3b477289cb36121dc5f6e48ff612

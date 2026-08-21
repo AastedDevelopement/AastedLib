@@ -1,0 +1,9 @@
+Name: Value State
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=57ad478378babc29a17766a2af16b1e3
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=b54f94351ca14d70a14827c1606bf708

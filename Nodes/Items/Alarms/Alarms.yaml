@@ -1,0 +1,21 @@
+Name: Alarms
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=f0eb4d2cc067a6c69bf52a76e62c76ec
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=8112f34c7fa72218f85b5799af0df2a2
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=0bd509aac2db936f6af06e62d53c0ef7
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=847b770cf8a15d0c9b5fdc87d9200e85
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=12af3a183b1d2eb3459e7f5f953ef7c2
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=ba256d3ca0532f059d7bebeb6df65bf0

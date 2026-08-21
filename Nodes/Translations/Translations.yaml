@@ -1,2 +1,19 @@
 Name: Translations
+Id: g=07f4d4a484020e9ee8c30995ec255bd4
 Type: FolderType
+Children:
+- Name: LocalizationDictionary1
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [3,2],
+    "Body": [
+     "Key","en-US",
+     "System Settings","System Settings",
+     "Page {#Actual_Number}/{#No_Of_Panels}","Page {#Actual_Number}/{#No_Of_Panels}"
+    ]
+   }

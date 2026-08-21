@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Process / Process_Slabformer_White</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons-/-Process-/-Process_Slabformer_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(16.000000, 17.000000) scale(-1, 1) translate(-16.000000, -17.000000) translate(3.000000, 4.000000)">
+            <path d="M24.0828922,22 L22.4599991,20.3771069 L23.1671059,19.6700001 L25.287766,21.7906602 L25.2884262,21.79 L25.995533,22.4971067 L25.9948728,22.497767 L25.995533,22.4984272 L25.2884262,23.205534 L25.287766,23.2048738 L23.1671059,25.3255339 L22.4599991,24.6184271 L24.0784262,23 L12,23 C5.372583,23 0,17.627417 0,11 L1,11 C1,17.0751322 5.92486775,22 12,22 L24.0828922,22 Z" id="Combined-Shape" fill="#FFFFFF" transform="translate(12.997766, 18.162767) scale(-1, 1) translate(-12.997766, -18.162767) "></path>
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="2" transform="translate(13.000000, 10.000000) scale(-1, 1) translate(-13.000000, -10.000000) " cx="13" cy="10" r="9"></circle>
+            <circle id="Oval-2" fill="#FFFFFF" transform="translate(13.000000, 10.000000) scale(-1, 1) translate(-13.000000, -10.000000) " cx="13" cy="10" r="2"></circle>
+        </g>
+    </g>
+</svg>

@@ -1,2 +1,39 @@
 Name: Items
 Type: FolderType
+Children:
+- Name: AastedLib
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "2c67042bf2d85d548483d8162dbab352"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: AastedLib
+    Type: FolderType
+    Children:
+    - File: Alarms/Alarms.yaml
+    - File: Controls/Controls.yaml
+    - File: Dropdown/Dropdown.yaml
+    - File: Efficiency/Efficiency.yaml
+    - File: Graphics/Graphics.yaml
+    - File: Language/Language.yaml
+    - File: Login/Login.yaml
+    - File: Machine_Parts/Machine_Parts.yaml
+    - File: Model_Types/Model_Types.yaml
+    - File: Others/Others.yaml
+    - File: Recipes/Recipes.yaml
+    - File: Safety_Mode/Safety_Mode.yaml
+    - File: SettingsService/SettingsService.yaml
+    - File: Shift_Register/Shift_Register.yaml
+    - File: Status/Status.yaml
+    - File: Template/Template.yaml
+    - File: Trends/Trends.yaml
+    - Class: Reference
+      Type: HasOwnedType
+      Target: g=1a14ec663cf6fc479f016b3e7f11feb1
+    - File: SystamStatus/SystamStatus.yaml
+    - File: AllCAMs/AllCAMs.yaml

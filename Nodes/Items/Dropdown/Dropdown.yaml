@@ -1,0 +1,15 @@
+Name: Dropdown
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=c3809f1f8b32b6736f1a944cdb25cb53
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=1ca618b925420745f3113116dedb25c4
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=ea1f3087d7dfa1d0e6a537d378d0c655
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=c5235af5e91ae63ebf81d23e219806f5

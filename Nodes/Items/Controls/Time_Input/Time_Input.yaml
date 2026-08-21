@@ -1,0 +1,9 @@
+Name: Time Input
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=daf9b8bbc2cdf608d9902afac9dd3b85
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=b03fc52f47c7e8df0f2cb498cd9c80fd

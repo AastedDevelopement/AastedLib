@@ -1,0 +1,43 @@
+Name: Recipes
+Type: FolderType
+Children:
+- File: Type/Type.yaml
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=d773bf69a7bf9fee97ca82a2d4567713
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=b64e92d68ee401df13d6d4c9bce40602
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=f5374763faa44244164e3e5f5839f31e
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=cd2a26ca632aadd91fae3dd43bc01091
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=5a8012eba3877e90d7115ac4f90b1e70
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=a2142d336b5d18f5f33dcea72e964e64
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=f1d0cc8bfedf8c1efc8149652f2ae019
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=a8e2399530d743bc0157ad88fd2c7d2b
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=88bcfb5c50d3b648158a689ff4a5fca1
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=12de77e6a6b3fe798db38f367decce03
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=abdb53142c782aa9efa91ad8d8fcf281
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=59562b8a6a2454c99a210c363bd8fe7f
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=d546c154c7f930011493d5e755c8a6a7

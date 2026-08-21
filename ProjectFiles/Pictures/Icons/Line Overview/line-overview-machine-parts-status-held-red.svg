@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="8px" viewBox="0 0 70 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>line-overview-machine-parts-status-held-red</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3,0 L67,0 C68.6568542,-3.04359188e-16 70,1.34314575 70,3 L70,8 L0,8 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="path-1"></path>
+    </defs>
+    <g id="----Assets1810" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-100.000000, -156.000000)">
+            <g id="Color-/-Blue" transform="translate(100.000000, 156.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" fill-rule="nonzero"></g>
+                <g id="Color-/-Red" mask="url(#mask-2)" fill="#F3103E">
+                    <rect id="Rectangle-9" x="0" y="0" width="70" height="8"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

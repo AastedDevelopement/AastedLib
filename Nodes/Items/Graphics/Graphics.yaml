@@ -1,0 +1,18 @@
+Name: Graphics
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=8fbb68fec6c2a41a64c280f1c8fe53f5
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=fac6938a11afa233bb24a7fe8ef59e52
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=2fde21a0db6904314b7b15a7e49444ab
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=562c69dcb2b14fa9219bd10acd946992
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=989a126d2356c893a54ec0949114d8db

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / ValueState / ValueState_MinorOffset</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons-/-ValueState-/-ValueState_MinorOffset" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Mask" fill="#F7C01B" transform="translate(12.000000, 12.000000) scale(1, -1) translate(-12.000000, -12.000000) " cx="12" cy="12" r="12"></circle>
+        <path d="M3.21870053,12.8541735 C2.83468604,13.2511009 2.2016076,13.2615688 1.80468025,12.8775543 C1.40775291,12.4935398 1.39728498,11.8604614 1.78129947,11.463534 C5.08623168,8.04747036 6.96825133,8.25223924 9.61183321,11.531209 C11.1907312,13.489597 12.8092688,13.489597 14.3881668,11.531209 C17.0183644,8.26884041 20.1391185,7.97559565 22.3557258,11.6414242 C22.6414943,12.1140285 22.4900339,12.7288111 22.0174296,13.0145796 C21.5448253,13.300348 20.9300427,13.1488877 20.6442742,12.6762834 C19.24305,10.3589366 17.7924279,10.4952458 15.9451665,12.7864985 C13.5657312,15.7378338 10.4342688,15.7378338 8.05483345,12.7864985 C6.13110765,10.4004031 5.64392705,10.3473965 3.21870053,12.8541735 Z" id="Path-3" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+Name: Output field
+Type: FolderType
+Children:
+- File: Type/Type.yaml
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=aa19cbf762d15a800ddaab4c26e09889
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=9cb875bbb8641d1e956ef99ad1796d1a
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=694754df4225daf2afc698f3ad2b86db
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=e8de008b0e1d467e848e88b87269ba7d
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=f49418e53bfebcb0e29821cd3bd33eaf
+- File: String/String.yaml

@@ -1,0 +1,18 @@
+Name: Object Types
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=e429bb9d83f509042c49e29b0b0846ce
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=92e651f0bbc943dd5b9fee0e17e67d59
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=710389d0c57e4d269080c1f703f58ea1
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=321f0e4bd0ccdd96e079c33097b5e87c
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=c90c444ba74cdef99b98c763b23ea5bf

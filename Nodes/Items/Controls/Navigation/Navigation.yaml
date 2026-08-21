@@ -1,0 +1,9 @@
+Name: Navigation
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=acc4ceefc75650a8ac572e47aff9e8dc
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=bc8651682b131ddf54e6f336c48f448e

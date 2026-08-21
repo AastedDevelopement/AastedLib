@@ -1,0 +1,50 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="80px" height="40px" viewBox="0 0 80 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>switch/switch-control-on-active-80x40px</title>
+    <desc>Created with Sketch.</desc>
+
+    <defs>
+        <rect id="path-1" x="0" y="0" width="80" height="40" rx="20"></rect>
+
+        <filter id="filter-2" x="-2.5%" y="-5.0%" width="105.0%" height="110.0%" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"></feGaussianBlur>
+            <feOffset in="blur" dx="0" dy="1" result="offsetBlur"></feOffset>
+            <feComposite in="offsetBlur" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="innerShadow"></feComposite>
+            <feFlood flood-color="#000000" flood-opacity="0.25" result="shadowColor"></feFlood>
+            <feComposite in="shadowColor" in2="innerShadow" operator="in" result="coloredShadow"></feComposite>
+            <feComposite in="SourceGraphic" in2="coloredShadow" operator="over"></feComposite>
+        </filter>
+
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#858585" offset="0%"></stop>
+            <stop stop-color="#6B6B6B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+
+    <g id="---Assets1903" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2---Switch-States" transform="translate(-610.000000, -122.000000)">
+            <g id="Labels" transform="translate(60.000000, 62.000000)">
+                <g id="Controls-/-Label" transform="translate(360.000000, 60.000000)">
+                    <g id="Controls-/_/-ActualValue-/-No-Offset"></g>
+                    <g id="Controls-/_/-Text">
+                        <text id="Text" font-family="Asap-Regular, Asap" font-size="16" font-weight="normal" fill="#000000">
+                            <tspan x="2" y="25">Switch On</tspan>
+                        </text>
+                        <g id="Documentation/Typo" transform="translate(0.000000, 28.000000)"></g>
+                    </g>
+                </g>
+            </g>
+
+            <g id="Switch-On---Active" transform="translate(610.000000, 122.000000)">
+                <g id="Rectangle-4">
+                    <use fill="#FFFFFF" filter="url(#filter-2)" href="#path-1"></use>
+                    <rect stroke="#C7C7C7" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="79" height="39" rx="19.5"></rect>
+                </g>
+
+                <circle id="Oval" stroke="#515151" fill="url(#linearGradient-3)" cx="59" cy="20" r="10.5"></circle>
+
+                <path d="M59,16.5 L59,23.5" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

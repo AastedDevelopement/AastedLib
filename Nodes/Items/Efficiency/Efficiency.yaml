@@ -1,0 +1,9 @@
+Name: Efficiency
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=58ccd60dbcf53596eb1099ed72ef8172
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=0bff8464b394e1fbfc1b0fff6a527af9

@@ -1,0 +1,12 @@
+Name: Trends
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=fcd0fb1c31df8daa14f9996a2c4ce4ab
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=4c4e50c2b1361734de61fee24bdfc5db
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=c02fe7a73597594db76310edf38ef37a

@@ -1,0 +1,24 @@
+Name: Input fields
+Type: FolderType
+Children:
+- File: Type/Type.yaml
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=a9ddb30b9da3e4816d932c3076f117b1
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=8d6c94911674fdae42f20447c3562e2c
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=3c7d9558b668f36b0d0acad6399ac05c
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=14b83e4206942c1c56e9fa3c49096529
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=4ce6fb59efc7c92a93a8fc9cc58b94b0
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=bfeb9c3abcd80261b2f7b0e5ea6958e8
+- File: String/String.yaml
+- File: TimeDate/TimeDate.yaml

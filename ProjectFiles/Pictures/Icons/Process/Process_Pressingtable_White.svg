@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Process / Process_Pressingtable_White</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons-/-Process-/-Process_Pressingtable_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(16.000000, 16.000000) scale(-1, 1) translate(-16.000000, -16.000000) translate(3.000000, 4.000000)">
+            <path d="M24.0828922,20 L22.4599991,18.3771069 L23.1671059,17.6700001 L25.287766,19.7906602 L25.2884262,19.79 L25.995533,20.4971067 L25.9948728,20.497767 L25.995533,20.4984272 L25.2884262,21.205534 L25.287766,21.2048738 L23.1671059,23.3255339 L22.4599991,22.6184271 L24.0784262,21 L21.6611969,21 C19.2782622,22.8788624 16.2700589,24 13,24 C9.72994106,24 6.72173784,22.8788624 4.33880306,21 L0,21 L0,20 L4.5,20 C4.63337486,20 4.7545526,20.052222 4.84420149,20.1373343 L4.85156157,20.1298945 C7.08074644,21.92532 9.91487074,23 13,23 C16.0807276,23 18.9111659,21.9283844 21.1388933,20.1375749 L21.1470802,20.1458141 C21.2375119,20.0557037 21.3622508,20 21.5,20 L24.0828922,20 Z" id="Combined-Shape" fill="#FFFFFF" transform="translate(12.997766, 20.835000) scale(-1, 1) translate(-12.997766, -20.835000) "></path>
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="2" transform="translate(13.000000, 10.000000) scale(-1, 1) translate(-13.000000, -10.000000) " cx="13" cy="10" r="9"></circle>
+            <circle id="Oval-2" fill="#FFFFFF" transform="translate(13.000000, 10.000000) scale(-1, 1) translate(-13.000000, -10.000000) " cx="13" cy="10" r="2"></circle>
+        </g>
+    </g>
+</svg>

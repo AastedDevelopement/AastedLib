@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / ValueState / ValueState_Locked</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons-/-ValueState-/-ValueState_Locked" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,11 C16.5522847,11 17,11.4477153 17,12 L17,17 C17,17.5522847 16.5522847,18 16,18 L9,18 C8.44771525,18 8,17.5522847 8,17 L8,12 C8,11.4477153 8.44771525,11 9,11 L9,9.5 C9,7.56700338 10.5670034,6 12.5,6 C14.4329966,6 16,7.56700338 16,9.5 L16,11 Z M14.5,11 L14.5,9.5 C14.5,8.3954305 13.6045695,7.5 12.5,7.5 C11.3954305,7.5 10.5,8.3954305 10.5,9.5 L10.5,11 L14.5,11 Z" id="Combined-Shape" fill="#515151" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -1,0 +1,6 @@
+Name: Checkbox
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=1dec9a8592ca06503c2372e623a97cbc

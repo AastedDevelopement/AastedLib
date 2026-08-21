@@ -1,0 +1,6 @@
+Name: String
+Type: FolderType
+Children:
+- Class: Reference
+  Type: HasOwnedType
+  Target: g=5c87852a084ecdf732126390e8ea6d1c
