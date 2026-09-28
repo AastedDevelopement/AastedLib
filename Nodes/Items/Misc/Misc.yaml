@@ -1,6 +1,6 @@
-Name: Checkbox
+Name: Misc
 Type: FolderType
 Children:
 - Class: Reference
   Type: HasOwnedType
-  Target: g=96050a7946ac32226f467f028d2e34ca
+  Target: g=502c2d5bc4366aab7260d9a9c1002cf8

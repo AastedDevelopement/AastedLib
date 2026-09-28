@@ -7,7 +7,7 @@ Children:
   - Name: LibraryItemGuid
     Type: BaseDataVariableType
     DataType: Guid
-    Value: "2c67042bf2d85d548483d8162dbab352"
+    Value: "b14b6036ef868102de7b2f8fa863cd1f"
   - Name: LibraryItemVersion
     Type: BaseDataVariableType
     DataType: UInt32
@@ -32,8 +32,6 @@ Children:
     - File: Status/Status.yaml
     - File: Template/Template.yaml
     - File: Trends/Trends.yaml
-    - Class: Reference
-      Type: HasOwnedType
-      Target: g=1a14ec663cf6fc479f016b3e7f11feb1
     - File: SystamStatus/SystamStatus.yaml
     - File: AllCAMs/AllCAMs.yaml
+    - File: Misc/Misc.yaml
