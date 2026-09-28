@@ -2,7 +2,7 @@ Name: Types
 Type: FolderType
 Children:
 - Name: AlarmType_Alarm_Template
-  Id: g=5ac91132eca7eb7757c8f78623815b89
+  Id: g=cf7008b3d7456eb9751eeeeebeeed17e
   Supertype: OffNormalAlarmType
   DisplayName: {"LocaleId":"","Text":"Alarm_Template"}
   Children:
@@ -138,7 +138,7 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
 - Name: Alarm_Template
-  Id: g=83a27f6b60491d510a974d8188f14909
+  Id: g=0bf9c7bbeec17d0ad3e2f1144cde51b9
   Supertype: OffNormalAlarmController
   Children:
   - Class: Reference
@@ -185,9 +185,6 @@ Children:
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
-  - Class: Reference
-    Type: GeneratesEvent
-    Target: g=5ac91132eca7eb7757c8f78623815b89
   - Name: AlarmID
     Type: BaseDataVariableType
     DataType: Int32
@@ -206,6 +203,9 @@ Children:
   - Name: Solution
     Type: BaseDataVariableType
     DataType: LocalizedText
+  - Class: Reference
+    Type: GeneratesEvent
+    Target: g=cf7008b3d7456eb9751eeeeebeeed17e
 - Name: Types_Trend
   Id: g=c83b0e9f83c5f67b02a1a4e28352c75f
   Supertype: BaseObjectType
@@ -30209,8 +30209,509 @@ Children:
     ReferenceType: HasParameter
     ModellingRule: Optional
     Value: {"LocaleId":"en-US","Text":"[°C]"}
+- Name: AaLib_Misc_Initialize
+  Id: g=b1473df1a5810e7360faf8e9cbd3183d
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1280.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 800.0
+  - Name: Image1
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=4;%PROJECTDIR%/Pictures/Backgrounds/Splashscreen-Light.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1280.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 800.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: FillMode
+      Type: BaseDataVariableType
+      DataType: ImageFillModeEnum
+      ModellingRule: Optional
+      Value: 1
+    - Name: HitTestVisible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../PLC_Synchronized"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"The system is ready. Press the screen to start."}
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"The system is booting. Please wait..."}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 26.0
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: BottomMargin
+      Type: BaseVariableType
+      DataType: Size
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1280.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 400.0
+    - Name: TextVerticalAlignment
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: TextHorizontalAlignment
+      Type: BaseVariableType
+      DataType: TextHorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: Style
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Default"
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: Button1
+    Type: Button
+    Children:
+    - Name: BackgroundColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":""}
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -1.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{PanelLoader_Templates}@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "ChangePanel"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: NewPanel
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Overview_Screen@Pointer"
+            - Name: AliasNode
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
+              ValueRank: ScalarOrOneDimension
+        - Name: MethodContainer2
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{PanelLoader_Main}@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "ChangePanel"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: NewPanel
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
+              Value: "/Objects/AastedLib/Types/AaLib_BlankScreen"
+            - Name: AliasNode
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
+              ValueRank: ScalarOrOneDimension
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../PLC_Synchronized"
+  - Name: Button2
+    Type: Button
+    Children:
+    - Name: BackgroundColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":""}
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{PanelLoader_Templates}@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "ChangePanel"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: NewPanel
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Overview_Screen@Pointer"
+            - Name: AliasNode
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
+              ValueRank: ScalarOrOneDimension
+        - Name: MethodContainer2
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{PanelLoader_Main}@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "ChangePanel"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: NewPanel
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
+              Value: "/Objects/AastedLib/Types/AaLib_BlankScreen"
+            - Name: AliasNode
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
+              ValueRank: ScalarOrOneDimension
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1210.0
+    - Name: BottomMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 730.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: Style
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "AastedButton"
+  - Name: Overview_Screen
+    Type: BaseDataVariableType
+    DataType: NodeId
+  - Name: PLC_Synchronized
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"en-US","Text":"Model/Intern Tags/General/Machine_Setup/General_Machine_Setup_Synchronized_With_PLC"}
+  - Name: ns=3;LockPassword
+    Type: BaseDataVariableType
+    DataType: PasswordHash
+    AccessLevel: Read
+    Value: 
+     {
+      "TypeId": {
+       "Id": 252,
+       "Namespace": 1
+      },
+      "Body": {
+       "Hash": [120,83,247,34,3,212,183,242,238,173,38,90,233,157,136,93,219,108,123,59,211,90,237,149,171,32,128,30,140,231,69,136],
+       "Salt": [59,249,19,39,246,45,50,211,140,23,180,85,53,100,51,204,134,118,199,67,16,119,100,214,226,136,213,244,23,81,158,217]
+      }
+     }
 - Name: AaLib_Alarms_History
-  Id: g=4682ba2ed4d23ea2eee599d0703baf99
+  Id: g=7feb0b93d98eee5741102ce4a1b87f66
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -31011,7 +31512,7 @@ Children:
       DataType: NodeId
       Value: "/Objects/AastedLib/Types/AaLib_System_Status_Type"
 - Name: AaLib_Alarms_List
-  Id: g=4eb59a8c9072fe5598c529322e2a7fb1
+  Id: g=8b4478065102e019f8f17a5e1f59e5a7
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -31959,7 +32460,7 @@ Children:
         Type: BaseDataVariableType
         DataType: NodeId
 - Name: AaLib_ListViewRow_AlarmList
-  Id: g=5f0a61cc1490210db724d77a4f164059
+  Id: g=d4cc227f10f4b15a5d43019cded913ca
   Supertype: ListViewRow
   ReferenceType: HasComponent
   Children:
@@ -32358,7 +32859,7 @@ Children:
       }
      }
 - Name: AaLib_ListViewRow_AlarmHistory
-  Id: g=46d59be54233506ccaff95cf252f7280
+  Id: g=2a9cdc9e82dad3d48cc5ed3fe79a05c6
   Supertype: ListViewRow
   ReferenceType: HasComponent
   Children:
@@ -32639,7 +33140,7 @@ Children:
       }
      }
 - Name: AaLib_Alarms_Detail
-  Id: g=a819f63ddc5373778512bd1deb96522b
+  Id: g=98b1b2fa4498ee2cb27b726adbcd8881
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -33563,7 +34064,7 @@ Children:
       ModellingRule: Optional
       Value: 40.0
 - Name: AaLib_Alarms_Safety
-  Id: g=f2de9f3362927dc5b5e8abab57df8beb
+  Id: g=0e5cf5a1fbedf3c94b8aa55053b2c1d2
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -33971,7 +34472,7 @@ Children:
       ModellingRule: Optional
       Value: 40.0
 - Name: AaLib_Dropdown_Widget
-  Id: g=41989953e49906d70dbbb8a939815df2
+  Id: g=c6f0d1613c1dde9734bbec00e8ac1006
   Supertype: ScaleLayout
   ReferenceType: HasComponent
   Children:
@@ -34454,7 +34955,7 @@ Children:
     DataType: String
     Description: {"LocaleId":"en-US","Text":"Model/Intern Tags/General/Dropdown_Text_And_Names/DropdownText_Trend"}
 - Name: AaLib_Dropdown_Overlay_Widget
-  Id: g=a13177a95ed4588c61081c618cbfcac3
+  Id: g=e8b1c9cc16df16ad7a04809117fc8ffa
   Supertype: Dialog
   ReferenceType: HasComponent
   Children:
@@ -34693,7 +35194,7 @@ Children:
       DataType: NodePath
       Value: "../Dropdown_Open"
 - Name: AaLib_Dropdown_Button
-  Id: g=6e98da90e38b43d12cb9394c3f1bdc85
+  Id: g=b342fe1c9c1085c40f89d0b8ee1d68f5
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -34939,7 +35440,7 @@ Children:
     DataType: Boolean
     Description: {"LocaleId":"en-US","Text":"Model/Intern Tags/General/Navigation/General_Navigation_Dropdown_Open"}
 - Name: AaLib_Dropdown_Button_Simple
-  Id: g=82a511b0298aefbccbd9dc6428d134e2
+  Id: g=61183210be415c171e153e63049cae37
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -35223,7 +35724,7 @@ Children:
     DataType: String
     Description: {"LocaleId":"en-US","Text":"Model/Intern Tags/General/Dropdown_Text_And_Names/DropdownText_Trend"}
 - Name: AaLib_Graph_24Hours
-  Id: g=f41c8e8d91dc2f5dcf9d86fb6f992f3a
+  Id: g=59e7df5eba2f8772998ac19f0c56a2d0
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -35649,7 +36150,7 @@ Children:
       }
      }
 - Name: AaLib_Graph_AllTime
-  Id: g=20c385c563a3a0dcc3f779071045e25c
+  Id: g=d3d8297633c11d1b2cecb0b18c29e0fb
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -37026,7 +37527,7 @@ Children:
       }
      }
 - Name: AaLib_Graphic_PopUp_300x500
-  Id: g=6d1b4680dcc1e3a295c1d6414d6802fb
+  Id: g=9a35f8351b0ece93c9bde90b2b9e1fbd
   Supertype: ScaleLayout
   ReferenceType: HasComponent
   Children:
@@ -37424,7 +37925,7 @@ Children:
     ModellingRule: Optional
     Value: true
 - Name: AaLib_Graphic_PopUp_Machine_Parts_350x1280
-  Id: g=ea63f1df6a22b856afc191e268c46dfc
+  Id: g=e78c3ef0ffeeab221d28332249f75f2b
   Supertype: ScaleLayout
   ReferenceType: HasComponent
   Children:
@@ -38153,7 +38654,7 @@ Children:
     ModellingRule: Optional
     Value: true
 - Name: AaLib_Graphic_PopUp_400x880
-  Id: g=9a6ecf470e5feb8a62edc014c8310b01
+  Id: g=2301e76b9fa331c83ee7a023bae351b9
   Supertype: ScaleLayout
   ReferenceType: HasComponent
   Children:
@@ -38551,7 +39052,7 @@ Children:
     ModellingRule: Optional
     Value: true
 - Name: AaLib_BlankScreen
-  Id: g=667850ac389dccbcc6901cba35d0ddf6
+  Id: g=62d01f3c6aedd487e2ca9474dd431a77
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -38705,7 +39206,7 @@ Children:
       DataType: Boolean
       ModellingRule: Optional
 - Name: AaLib_DisplayScreen
-  Id: g=db1853011d76baa50a5635485c71281a
+  Id: g=4317025146c28e3d3507644d689171e1
   Supertype: ScaleLayout
   ReferenceType: HasComponent
   Children:
@@ -38934,7 +39435,7 @@ Children:
         }
        }
 - Name: AaLib_Language
-  Id: g=be34163e4406bc58d0397af4ebe70b0d
+  Id: g=f1e0118c1f14b93e9754744dab816f19
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -39619,7 +40120,7 @@ Children:
       ModellingRule: Optional
       Value: 40.0
 - Name: AaLib_Login
-  Id: g=5b55afdd6fde114c087f241e41393f5e
+  Id: g=f7497b39c73e1ef77956bece2eff7eff
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -40105,7 +40606,7 @@ Children:
         DataType: NodeId
         Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
 - Name: AaLib_LoggedIn
-  Id: g=2005a0d009571b74a0d43587492889de
+  Id: g=464207d01b622f19858d6cadcda050e8
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -41002,7 +41503,7 @@ Children:
       ModellingRule: Optional
       Value: 3
 - Name: AaLib_LoggedOut
-  Id: g=9f5f98a44ae5e5be99f8f3c7b560340e
+  Id: g=d0d07712a1dd7038511622a7e17a1ff6
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -41988,7 +42489,7 @@ Children:
     ModellingRule: Optional
     Value: 3
 - Name: AaLib_MachineParts_LineOverview
-  Id: g=6ff1c4946b0c69c01ce01e2bafb106cf
+  Id: g=7d10a2c2581924ce69b7d698b287e581
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -43691,7 +44192,7 @@ Children:
       DataType: NodeId
       Value: "/Objects/AastedLib/Types/AaLib_Navigation_Type"
 - Name: AaLib_MachineParts_ComlineGoToOverview
-  Id: g=74dd1436fcfb43f20289f019ce7af80d
+  Id: g=9323987d422f037174f1270f2f274909
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -45419,7 +45920,7 @@ Children:
       DataType: NodeId
       Value: "/Objects/AastedLib/Types/AaLib_Machine_Setup_Type"
 - Name: AaLib_Unit_Panel
-  Id: g=c72dd024708268874651ccad206019a7
+  Id: g=ec65f0720b6477ff2672f8500c89b6a5
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -45934,7 +46435,7 @@ Children:
     DataType: Boolean
     Value: true
 - Name: AaLib_Recipe_list
-  Id: g=ad5e96ede8c9f0b8625422645c4900ad
+  Id: g=98e44191c03c584f8b1fcdf61457e02c
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -47273,7 +47774,7 @@ Children:
     DataType: NodeId
     Description: {"LocaleId":"en-US","Text":"Model/Recipes/RecipeObjects/Temp_DB_xxx"}
 - Name: AaLib_Recipe_CreateNew
-  Id: g=0c9438d8ddf91cc21fadc8dda7545f38
+  Id: g=34dc2388d8649215af17d1eed3a23692
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -50078,7 +50579,7 @@ Children:
     Type: BaseDataVariableType
     DataType: NodeId
 - Name: AaLib_Recipe_Preview
-  Id: g=a6966a7faf7a268cfde5b1963c8655b7
+  Id: g=7d5116970a7296a30375f9c9b41a6853
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -54976,7 +55477,7 @@ Children:
       DataType: NodeId
       Value: {"IdType":2,"Id":"2ca9cd2c672ae6d9ef1347da84f35836","Namespace":4}
 - Name: AaLib_PopUp_Recipe_GeneralCommandStatus
-  Id: g=8cfe6b932259ac8778b332d13fc072bc
+  Id: g=666f0668994e5ec71896063cb59b81aa
   Supertype: Dialog
   ReferenceType: HasComponent
   Children:
@@ -55395,7 +55896,7 @@ Children:
           Type: PropertyType
           DataType: UInt16
 - Name: AaLib_PopUp_Recipe_Create
-  Id: g=cb6f7e7b79dc6afb55e24fe985a15033
+  Id: g=045b9025566344a2eed16c92ccd717dd
   Supertype: AaLib_PopUp_Recipe
   ReferenceType: HasComponent
   Children:
@@ -56331,7 +56832,7 @@ Children:
       DataType: NodeId
       Value: {"IdType":2,"Id":"2ca9cd2c672ae6d9ef1347da84f35836","Namespace":4}
 - Name: AaLib_PopUp_Recipe_Delete
-  Id: g=31daa41a11c2b81b45bb2061fe7ea345
+  Id: g=ec1e3d6a79171c7ca3848a93ef145ca4
   Supertype: AaLib_PopUp_Recipe
   ReferenceType: HasComponent
   Children:
@@ -57285,7 +57786,7 @@ Children:
       DataType: NodeId
       Value: {"IdType":2,"Id":"2ca9cd2c672ae6d9ef1347da84f35836","Namespace":4}
 - Name: AaLib_PopUp_Recipe_Export
-  Id: g=2679a4b12268c76f42a6387cb3884f2b
+  Id: g=c37f1abfb0feefe04f527c7908b4dd83
   Supertype: AaLib_PopUp_Recipe
   ReferenceType: HasComponent
   Children:
@@ -58194,7 +58695,7 @@ Children:
       DataType: NodeId
       Value: {"IdType":2,"Id":"2ca9cd2c672ae6d9ef1347da84f35836","Namespace":4}
 - Name: AaLib_PopUp_Recipe_Import
-  Id: g=3e9cf436b0523cc4c0245bc682f5838c
+  Id: g=654818a0cb02301ac0303d096b39d159
   Supertype: AaLib_PopUp_Recipe
   ReferenceType: HasComponent
   Children:
@@ -59187,7 +59688,7 @@ Children:
       DataType: NodeId
       Value: {"IdType":2,"Id":"2ca9cd2c672ae6d9ef1347da84f35836","Namespace":4}
 - Name: AaLib_PopUp_Recipe_Load
-  Id: g=962b4668c291147d28e4e1fd6c9701de
+  Id: g=b18367d5e40dd54ed0b9f2647c0013b3
   Supertype: AaLib_PopUp_Recipe
   ReferenceType: HasComponent
   Children:
@@ -60172,7 +60673,7 @@ Children:
     DataType: Boolean
     Description: {"LocaleId":"en-US","Text":"Model/Recipe/RecipeObjecs/IsRecipeDiffernet_xxx"}
 - Name: AaLib_PopUp_Recipe_Save
-  Id: g=88d9aed0b52465d1150b60184c12add3
+  Id: g=559362c24043526ba2acd575dc2f9ae6
   Supertype: AaLib_PopUp_Recipe
   ReferenceType: HasComponent
   Children:
@@ -60916,7 +61417,7 @@ Children:
     DataType: Boolean
     Description: {"LocaleId":"en-US","Text":"Model/Recipe/RecipeObjecs/IsRecipeDiffernet_xxx"}
 - Name: AaLib_PopUp_Recipe_SaveAs
-  Id: g=05fc7ad8a002343919be73aeed636e41
+  Id: g=1a24f9ebccb098d02a1af46de329a215
   Supertype: AaLib_PopUp_Recipe
   ReferenceType: HasComponent
   Children:
@@ -63299,7 +63800,7 @@ Children:
     DataType: Boolean
     Description: {"LocaleId":"en-US","Text":"Model/Recipe/RecipeObjecs/IsRecipeDiffernet_xxx"}
 - Name: AaLib_PopUp_Recipe_SaveEdit
-  Id: g=09416dceb1340822bed393d0d34fc4b3
+  Id: g=566218d90113d2e1284ab85f8d76237b
   Supertype: AaLib_PopUp_Recipe
   ReferenceType: HasComponent
   Children:
@@ -64242,7 +64743,7 @@ Children:
       DataType: NodeId
       Value: {"IdType":2,"Id":"2ca9cd2c672ae6d9ef1347da84f35836","Namespace":4}
 - Name: AaLib_ListViewRow_Recipe
-  Id: g=37cb45f56eecbc1414114d9db233afea
+  Id: g=d9fa7946cc4802cc05fa605ea4502ebe
   Supertype: ListViewRow
   ReferenceType: HasComponent
   Children:
@@ -65133,7 +65634,7 @@ Children:
     DataType: String
     Description: {"LocaleId":"en-US","Text":"Model/Recipe/xxx/Recipe_Name"}
 - Name: AaLib_SafetyMode_Machine_5_modes
-  Id: g=e7bf275cecef37a6899cc6814b418d06
+  Id: g=63b013085205c072c0efeeb551fbd514
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -68252,7 +68753,7 @@ Children:
       DataType: Int32
       Description: {"LocaleId":"en-US","Text":"General_xxx/HMI_Safety_Level_Status/Key_Level_5_Percentage"}
 - Name: AaLib_SafetyMode_Machine_3_modes
-  Id: g=76b04df31014032f14779976b38c5ab3
+  Id: g=bb691ce719100e22554311b7ccee9751
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -69188,6 +69689,10 @@ Children:
           DataType: TextHorizontalAlignment
           ModellingRule: Optional
           Value: 2
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
       - Name: Label3
         Type: Label
         Children:
@@ -69395,6 +69900,21 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
+    - Name: ns=3;LockPassword
+      Type: BaseDataVariableType
+      DataType: PasswordHash
+      AccessLevel: Read
+      Value: 
+       {
+        "TypeId": {
+         "Id": 252,
+         "Namespace": 1
+        },
+        "Body": {
+         "Hash": [84,199,59,221,10,164,244,220,58,161,78,9,4,46,183,167,44,12,200,244,136,245,246,147,171,45,135,247,67,215,218,204],
+         "Salt": [146,124,123,174,139,246,255,35,130,104,50,177,77,221,44,243,98,59,86,31,90,70,80,14,190,164,172,2,189,252,107,162]
+        }
+       }
   - Name: Section2
     Type: Panel
     Children:
@@ -70658,8 +71178,23 @@ Children:
       Type: BaseDataVariableType
       DataType: Int32
       Description: {"LocaleId":"en-US","Text":"General_xxx/HMI_Safety_Level_Status/Key_Level_3_Bar"}
+    - Name: ns=3;LockPassword
+      Type: BaseDataVariableType
+      DataType: PasswordHash
+      AccessLevel: Read
+      Value: 
+       {
+        "TypeId": {
+         "Id": 252,
+         "Namespace": 1
+        },
+        "Body": {
+         "Hash": [69,8,126,177,24,117,158,220,191,228,141,77,136,85,109,2,223,72,152,230,203,127,150,83,9,40,186,117,170,241,69,178],
+         "Salt": [44,163,67,169,143,152,183,79,72,191,49,234,89,192,145,48,125,109,200,123,28,169,126,243,112,124,171,102,253,152,184,70]
+        }
+       }
 - Name: AaLib_SafetyMode_Elaboration
-  Id: g=77d68755fa0677bd00ab2756afdf7f37
+  Id: g=625d4d42158b8c0f020c9e79f514b65c
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -71338,7 +71873,7 @@ Children:
       ModellingRule: Optional
       Value: 40.0
 - Name: AaLib_SettingsMenu2
-  Id: g=277cad7344b13cd773c4c6fd79df0f02
+  Id: g=907b3161d23951335a1dd620845644c9
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -91616,7 +92151,7 @@ Children:
             DataType: NodeId
             Value: "/Objects/AastedLib/Types/AaLib_Navigation_Type"
 - Name: AaLib_ServiceMenu2
-  Id: g=1148590b9e766713c470353168761dea
+  Id: g=3a16d53666bf811c80247641ee330653
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -101515,7 +102050,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
 - Name: AaLib_SettingsService_Button
-  Id: g=d4f872d1dabe8140c331748a91af398b
+  Id: g=0e5deea1e0165dfd8fa5604ecf019d2e
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -102172,7 +102707,7 @@ Children:
       DataType: NodeId
       Value: "/Objects/AastedLib/Types/AaLib_Navigation_Type"
 - Name: AaLib_SettingsMenu
-  Id: g=57db62a2ebe6b1fddbbd7925c654f1e1
+  Id: g=51892d745a922635bd6d9a00d07f8965
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -121950,7 +122485,7 @@ Children:
       ModellingRule: Optional
       Value: "Invisible"
 - Name: AaLib_ServiceMenu
-  Id: g=8e827a9dc61e074639fc776212260c60
+  Id: g=4835713fdf0cd3a047df5580e6f4278a
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -131740,7 +132275,7 @@ Children:
       ModellingRule: Optional
       Value: "Invisible"
 - Name: AaLib_Acordion
-  Id: g=2a40981c22528d0e23006fadcb6dd170
+  Id: g=f043b76c96ca640f17e681d5a19b1c95
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -136284,7 +136819,7 @@ Children:
       DataType: NodeId
       Value: "/Objects/AastedLib/Types/AaLib_Navigation_Type"
 - Name: AaLib_ShiftRegister_Sections
-  Id: g=12981100283f2f2daf4bc4c99e942b83
+  Id: g=777c89ac9eb2f02c6b34becbbe61ad59
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -136404,7 +136939,7 @@ Children:
     DataType: Size
     ModellingRule: Optional
 - Name: AaLib_ShiftRegister_SRG_Group
-  Id: g=8a4b297e23486f307f28edc6e668b98e
+  Id: g=b127c0d15eb070b776371f13d784a6e9
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -145643,7 +146178,7 @@ Children:
     ModellingRule: Optional
     Value: 32.0
 - Name: AaLib_ShiftRegister_Rectangle_SRGTemplate
-  Id: g=4f3ea8725b3409581906f8471e3a9c60
+  Id: g=15bd283c22e62a882507179ab682dba4
   Supertype: Rectangle
   ReferenceType: HasComponent
   Children:
@@ -145844,7 +146379,7 @@ Children:
     ModellingRule: Optional
     Value: 1.0
 - Name: AaLib_ShiftRegister_Color_Codes
-  Id: g=81413b26e8d07e90e48d43bca22a5d46
+  Id: g=ddc7d98803e6e2daf9e5c79181e4bbd7
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -146109,7 +146644,7 @@ Children:
       ModellingRule: Optional
       Value: 14.0
 - Name: AaLib_Header
-  Id: g=9c42b9c276efb62029e5cba5421ed9d0
+  Id: g=7da7e03c1fb602709271d05b1c637a55
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -148904,7 +149439,7 @@ Children:
     DataType: String
     Description: {"LocaleId":"en-US","Text":"General_xxx/Hmi_Command/Machine_Name"}
 - Name: AaLib_Template_Machine_General
-  Id: g=9f317b62fed76374c9b0d7699567d41a
+  Id: g=98cb4448ecc146ccfec831a4ddbc0a21
   Supertype: Screen
   ReferenceType: HasComponent
   Children:
@@ -161733,7 +162268,7 @@ Children:
     Type: BaseDataVariableType
     DataType: String
 - Name: AaLib_Template_Line_General
-  Id: g=586b168f24746a7dbf4c0e8b8188cdf3
+  Id: g=062fa5a2e8f61eeb267d7092988fedaa
   Supertype: Screen
   ReferenceType: HasComponent
   Children:
@@ -173533,7 +174068,7 @@ Children:
       ModellingRule: Optional
       Value: 3
 - Name: AaLib_Trend_Widget
-  Id: g=52e1f20b32cef440f21e0b72263ec043
+  Id: g=55ee1ce6b562c4c9902a2e42691efa98
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -173998,7 +174533,7 @@ Children:
       DataType: NodePointerNodeClass
       ModellingRule: Optional
 - Name: AaLib_Trends_Screen
-  Id: g=66d13f3fbfc012599f43545363453a0e
+  Id: g=b7d5eee8d517813e42b9f065791df625
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -187377,7 +187912,7 @@ Children:
       DataType: NodeId
       Value: "/Objects/AastedLib/Types/Types_Trend"
 - Name: AaLib_Trends_Extended_Screen
-  Id: g=c8954f2a1ffda7f81424b9b429e0c696
+  Id: g=f0aa306f3f690931d636405f8a815a5e
   Supertype: AaLib_DisplayScreen
   ReferenceType: HasComponent
   Children:
@@ -192328,7 +192863,7 @@ Children:
       DataType: NodeId
       Value: "/Objects/AastedLib/Types/AaLib_Dropdown_Text_And_Names_Type"
 - Name: AaLib_StatusPanel
-  Id: g=7094affc04242f25d0ca09656bb22861
+  Id: g=5b76e51073ab878cef3ae0d1a5852b00
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -192489,7 +193024,7 @@ Children:
     ModellingRule: Optional
     Value: 40.0
 - Name: AaLib_Alarm_Message
-  Id: g=0a3f7de780b754cc2a9a845bfaea6abb
+  Id: g=e61551e56f656296663d67ff64905031
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -192826,7 +193361,7 @@ Children:
       }
      }
 - Name: Aalib_AllCAMs_1of2_Deg
-  Id: g=d737722c9dafab9c5a2a164e379525ad
+  Id: g=179e8bac5c87fd0a2628e3371e7e541b
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -202716,7 +203251,7 @@ Children:
       }
      }
 - Name: Aalib_AllCAMs_2of2_Deg
-  Id: g=33859d487489e2ef238fbb2856a23c7a
+  Id: g=c9a9d22bcf0e80806ede1920861cc525
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -212695,7 +213230,7 @@ Children:
       }
      }
 - Name: Aalib_AllCAMs_1of2_mm
-  Id: g=d7ea60a3def6b12e95c361f04f4603d7
+  Id: g=39a57f3e9d7a70ce5350fbd97d29664d
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -222686,7 +223221,7 @@ Children:
     DataType: String
     Description: {"LocaleId":"en-US","Text":"The name of the selected unit"}
 - Name: Aalib_AllCAMs_2of2_mm
-  Id: g=0849b18cda52dec79e07e1896e4179d2
+  Id: g=ff6cd802ffb2a8545e4183213677c8bf
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -232677,471 +233212,8 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Description: {"LocaleId":"en-US","Text":"The name of the selected unit"}
-- Name: AaLib_Misc_Initialize
-  Id: g=502c2d5bc4366aab7260d9a9c1002cf8
-  Supertype: Panel
-  ReferenceType: HasComponent
-  Children:
-  - Name: Width
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 1280.0
-  - Name: Height
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 800.0
-  - Name: Image1
-    Type: Image
-    Children:
-    - Name: Path
-      Type: BaseDataVariableType
-      DataType: ResourceUri
-      Value: "ns=4;%PROJECTDIR%/Pictures/Backgrounds/Splashscreen-Light.png"
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1280.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 800.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: FillMode
-      Type: BaseDataVariableType
-      DataType: ImageFillModeEnum
-      ModellingRule: Optional
-      Value: 1
-    - Name: HitTestVisible
-      Type: BaseDataVariableType
-      DataType: Boolean
-      ModellingRule: Optional
-    - Name: Enabled
-      Type: BaseDataVariableType
-      DataType: Boolean
-      ModellingRule: Optional
-      Value: true
-  - Name: Label1
-    Type: Label
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      Children:
-      - Name: ConditionalConverter1
-        Type: ConditionalConverter
-        Children:
-        - Name: Condition
-          Type: BaseDataVariableType
-          DataType: Boolean
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-        - Name: TrueValue
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"The system is ready. Press the screen to start."}
-        - Name: FalseValue
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"The system is booting. Please wait..."}
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-    - Name: FontSize
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 26.0
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 2
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 2
-    - Name: BottomMargin
-      Type: BaseVariableType
-      DataType: Size
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1280.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 400.0
-    - Name: TextVerticalAlignment
-      Type: BaseVariableType
-      DataType: TextVerticalAlignment
-      ModellingRule: Optional
-      Value: 2
-    - Name: TextHorizontalAlignment
-      Type: BaseVariableType
-      DataType: TextHorizontalAlignment
-      ModellingRule: Optional
-      Value: 1
-    - Name: Style
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "Default"
-    - Name: RightMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-  - Name: HorizontalAlignment
-    Type: BaseVariableType
-    DataType: HorizontalAlignment
-    ModellingRule: Optional
-    Value: 3
-  - Name: VerticalAlignment
-    Type: BaseVariableType
-    DataType: VerticalAlignment
-    ModellingRule: Optional
-    Value: 3
-  - Name: Button1
-    Type: Button
-    Children:
-    - Name: BackgroundColor
-      Type: BaseDataVariableType
-      DataType: Color
-      ModellingRule: Optional
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":""}
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: -1.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: MouseClickEventHandler1
-      Type: EventHandler
-      Children:
-      - Name: ListenEventType
-        Type: PropertyType
-        DataType: NodeId
-        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-      - Name: MethodsToCall
-        Type: BaseObjectType
-        Children:
-        - Name: MethodContainer1
-          Type: BaseObjectType
-          Children:
-          - Name: ns=2;ObjectPointer
-            Type: NodePointer
-            DataType: NodeId
-            Children:
-            - Name: Kind
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType"
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "{PanelLoader_Templates}@NodeId"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
-          - Name: ns=2;Method
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "ChangePanel"
-          - Name: InputArguments
-            Type: BaseObjectType
-            Children:
-            - Name: NewPanel
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
-            - Name: AliasNode
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
-              ValueRank: ScalarOrOneDimension
-        - Name: MethodContainer2
-          Type: BaseObjectType
-          Children:
-          - Name: ns=2;ObjectPointer
-            Type: NodePointer
-            DataType: NodeId
-            Children:
-            - Name: Kind
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType"
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "{PanelLoader_Main}@NodeId"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
-          - Name: ns=2;Method
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "ChangePanel"
-          - Name: InputArguments
-            Type: BaseObjectType
-            Children:
-            - Name: NewPanel
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
-              Value: "/Objects/AastedLib/Types/AaLib_BlankScreen"
-            - Name: AliasNode
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
-              ValueRank: ScalarOrOneDimension
-      - Name: EventArguments
-        Type: MouseClickEvent
-        Children:
-        - Name: EventId
-          Type: PropertyType
-          DataType: ByteString
-        - Name: EventType
-          Type: PropertyType
-          DataType: NodeId
-        - Name: SourceNode
-          Type: PropertyType
-          DataType: NodeId
-        - Name: SourceName
-          Type: PropertyType
-          DataType: String
-        - Name: Time
-          Type: PropertyType
-          DataType: UtcTime
-        - Name: ReceiveTime
-          Type: PropertyType
-          DataType: UtcTime
-        - Name: Message
-          Type: PropertyType
-          DataType: LocalizedText
-        - Name: Severity
-          Type: PropertyType
-          DataType: UInt16
-    - Name: Enabled
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: true
-  - Name: Button2
-    Type: Button
-    Children:
-    - Name: BackgroundColor
-      Type: BaseDataVariableType
-      DataType: Color
-      ModellingRule: Optional
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":""}
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 40.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-    - Name: MouseClickEventHandler1
-      Type: EventHandler
-      Children:
-      - Name: ListenEventType
-        Type: PropertyType
-        DataType: NodeId
-        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-      - Name: MethodsToCall
-        Type: BaseObjectType
-        Children:
-        - Name: MethodContainer1
-          Type: BaseObjectType
-          Children:
-          - Name: ns=2;ObjectPointer
-            Type: NodePointer
-            DataType: NodeId
-            Children:
-            - Name: Kind
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType"
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "{PanelLoader_Templates}@NodeId"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
-          - Name: ns=2;Method
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "ChangePanel"
-          - Name: InputArguments
-            Type: BaseObjectType
-            Children:
-            - Name: NewPanel
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
-            - Name: AliasNode
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
-              ValueRank: ScalarOrOneDimension
-        - Name: MethodContainer2
-          Type: BaseObjectType
-          Children:
-          - Name: ns=2;ObjectPointer
-            Type: NodePointer
-            DataType: NodeId
-            Children:
-            - Name: Kind
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType"
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "{PanelLoader_Main}@NodeId"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
-          - Name: ns=2;Method
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "ChangePanel"
-          - Name: InputArguments
-            Type: BaseObjectType
-            Children:
-            - Name: NewPanel
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
-              Value: "/Objects/AastedLib/Types/AaLib_BlankScreen"
-            - Name: AliasNode
-              Type: BaseDataVariableType
-              DataType: NodeId
-              Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
-              ValueRank: ScalarOrOneDimension
-      - Name: EventArguments
-        Type: MouseClickEvent
-        Children:
-        - Name: EventId
-          Type: PropertyType
-          DataType: ByteString
-        - Name: EventType
-          Type: PropertyType
-          DataType: NodeId
-        - Name: SourceNode
-          Type: PropertyType
-          DataType: NodeId
-        - Name: SourceName
-          Type: PropertyType
-          DataType: String
-        - Name: Time
-          Type: PropertyType
-          DataType: UtcTime
-        - Name: ReceiveTime
-          Type: PropertyType
-          DataType: UtcTime
-        - Name: Message
-          Type: PropertyType
-          DataType: LocalizedText
-        - Name: Severity
-          Type: PropertyType
-          DataType: UInt16
-    - Name: Enabled
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: true
-    - Name: RightMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1210.0
-    - Name: BottomMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 730.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 40.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-    - Name: Style
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "AastedButton"
 - Name: AaLib_InputField_30x80
-  Id: g=b2f1fb53bbb13d7fe3baccc129eefd68
+  Id: g=b21024510e5c6003878c07e8ea36c744
   Supertype: AaLib_InputField
   ReferenceType: HasComponent
   Children:
@@ -234016,7 +234088,7 @@ Children:
             DataType: NodePath
             Value: "../../../../Control_Enable (BOOL b1)"
 - Name: AaLib_InputField_40x40
-  Id: g=138a7a8fb6451413dfeb050d478b39a0
+  Id: g=c7ded1d5a62a191782ca127a3bdcba2f
   Supertype: AaLib_InputField
   ReferenceType: HasComponent
   Children:
@@ -234886,7 +234958,7 @@ Children:
             DataType: NodePath
             Value: "../../../../Control_Enable (BOOL b1)"
 - Name: AaLib_InputField_40x80
-  Id: g=e277b319dea852728ed43ee87f936869
+  Id: g=ad7ef4f45cb03a25e8c9e833fdbb1b8c
   Supertype: AaLib_InputField
   ReferenceType: HasComponent
   Children:
@@ -235756,7 +235828,7 @@ Children:
             DataType: NodePath
             Value: "../../../../Control_Enable (BOOL b1)"
 - Name: AaLib_InputField_40x100
-  Id: g=36b85579506fc3580a24c14e7f4e7604
+  Id: g=3695afe1160d53e1a35d80904ed10440
   Supertype: AaLib_InputField
   ReferenceType: HasComponent
   Children:
@@ -236626,7 +236698,7 @@ Children:
             DataType: NodePath
             Value: "../../../../Control_Enable (BOOL b1)"
 - Name: AaLib_InputField_40x150
-  Id: g=74e43c33b118f51814acd9fc68dcdb02
+  Id: g=81061b5f4e703ec512b5e4b147af570d
   Supertype: AaLib_InputField
   ReferenceType: HasComponent
   Children:
@@ -237496,7 +237568,7 @@ Children:
             DataType: NodePath
             Value: "../../../../Control_Enable (BOOL b1)"
 - Name: AaLib_InputField_40x200
-  Id: g=9a8a0fb35f02c0a113533081ee5266ca
+  Id: g=ffa00579b644a493aa1187dec59971a8
   Supertype: AaLib_InputField
   ReferenceType: HasComponent
   Children:
@@ -238361,7 +238433,7 @@ Children:
             DataType: NodePath
             Value: "../../../../Control_Enable (BOOL b1)"
 - Name: AaLib_InputFieldsWithStepper_40x150
-  Id: g=d717475f909d41551bc671b9cd9fd4e5
+  Id: g=69ab186da5353df4e0e6cbe7bb4e0df9
   Supertype: AaLib_InputFieldsWithStepper
   ReferenceType: HasComponent
   Children:
@@ -239484,7 +239556,7 @@ Children:
                   DataType: NodePath
                   Value: "../../../../../../../Ctrl Bits.3"
 - Name: AaLib_InputFieldsWithStepper_40x200
-  Id: g=9dfef3a9c36b7e8fa2313edb43cb33eb
+  Id: g=5511af094a5268af88257d733bf43018
   Supertype: AaLib_InputFieldsWithStepper
   ReferenceType: HasComponent
   Children:
@@ -240616,7 +240688,7 @@ Children:
                   DataType: NodePath
                   Value: "../../../../../../../Ctrl Bits.3"
 - Name: AaLib_InputBarGraphWithStepper
-  Id: g=e862982a5fe5d5072bd5b6831235aaa1
+  Id: g=b6a20fff4f329756e5de38527a242b42
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -242683,7 +242755,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Int32
 - Name: AaLib_Switch_6States_40x80
-  Id: g=3fabb41c531b23f6bc8984407c483981
+  Id: g=32eca00faa8b0545af9583ab7950f1bb
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -242864,7 +242936,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Int32
 - Name: AaLib_Switch_2States_40x80
-  Id: g=dd9310357d4d416d26e3a1773a056e3b
+  Id: g=5a373a25174c385cbce45bf17a0d3430
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -243042,8 +243114,8 @@ Children:
   - Name: Status
     Type: BaseDataVariableType
     DataType: Boolean
-- Name: AaLib_PageNavigator_Machine_Part_Bottom_Panel
-  Id: g=d20f539892e476f386ee6c0abe2f9dac
+- Name: AaLib_PageNavigator_OpenDialog
+  Id: g=1293fcf81ebabcd3c020df076cdea1fb
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -243128,10 +243200,28 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 160.0
-  - Name: Image1
-    Type: Image
+  - Name: Left
+    Type: MomentaryButton
     Children:
-    - Name: Path
+    - Name: Active
+      Type: BaseDataVariableType
+      DataType: Boolean
+      AccessLevel: Read
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: BackgroundColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+    - Name: ImagePath
       Type: BaseDataVariableType
       DataType: ResourceUri
       Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Default_Left_ClickArrow_40x40px.png"
@@ -243147,7 +243237,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../../Left/Active"
+            Value: "../../../Active"
         - Name: TrueValue
           Type: BaseDataVariableType
           DataType: ResourceUri
@@ -243160,183 +243250,32 @@ Children:
           ReferenceType: HasParameter
           ModellingRule: Optional
           Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Default_Left_ClickArrow_40x40px.png"
-    - Name: Width
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+    - Name: Opacity
+      Type: BaseVariableType
+      DataType: Float
+      Value: 100.0
+    - Name: RightMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 40.0
-    - Name: Height
+    - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 40.0
-    - Name: Left
-      Type: MomentaryButton
-      Children:
-      - Name: Active
-        Type: BaseDataVariableType
-        DataType: Boolean
-        AccessLevel: Read
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 40.0
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 40.0
-      - Name: BackgroundColor
-        Type: BaseDataVariableType
-        DataType: Color
-        ModellingRule: Optional
-      - Name: HorizontalAlignment
-        Type: BaseVariableType
-        DataType: HorizontalAlignment
-        ModellingRule: Optional
-        Value: 3
-      - Name: Visible
-        Type: BaseDataVariableType
-        DataType: Boolean
-        ModellingRule: Optional
-        Value: true
-      - Name: Opacity
-        Type: BaseVariableType
-        DataType: Float
-        Value: 100.0
-      - Name: RightMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-      - Name: Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-        Children:
-        - Name: ExpressionEvaluator1
-          Type: ExpressionEvaluator
-          Children:
-          - Name: Expression
-            Type: BaseDataVariableType
-            DataType: String
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "{#ActualPanel}!=1"
-          - Name: ns=2;SourceActualPanel
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../../../Actual_Panel"
-      - Name: ImagePosition
-        Type: BaseDataVariableType
-        DataType: ButtonImagePosition
-        Value: 4
-      - Name: MouseClickEventHandler2
-        Type: EventHandler
-        Children:
-        - Name: ListenEventType
-          Type: PropertyType
-          DataType: NodeId
-          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-        - Name: MethodsToCall
-          Type: BaseObjectType
-          Children:
-          - Name: MethodContainer1
-            Type: BaseObjectType
-            Children:
-            - Name: ns=2;ObjectPointer
-              Type: NodePointer
-              DataType: NodeId
-              Children:
-              - Name: Kind
-                Type: PropertyType
-                DataType: NodeId
-                Value: "/Types/ObjectTypes/BaseObjectType"
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{PanelLoader_Line_Overview_Bottom}@NodeId"
-                Children:
-                - Name: Mode
-                  Type: BaseVariableType
-                  DataType: DynamicLinkMode
-                  ModellingRule: Optional
-                  Value: 2
-            - Name: ns=2;Method
-              Type: BaseDataVariableType
-              DataType: String
-              Value: "ChangePanel"
-            - Name: InputArguments
-              Type: BaseObjectType
-              Children:
-              - Name: NewPanel
-                Type: BaseDataVariableType
-                DataType: NodeId
-                Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
-                Children:
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../../../../../GoTo_Left@Pointer"
-              - Name: AliasNode
-                Type: BaseDataVariableType
-                DataType: NodeId
-                Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
-                ValueRank: ScalarOrOneDimension
-        - Name: EventArguments
-          Type: MouseClickEvent
-          Children:
-          - Name: EventId
-            Type: PropertyType
-            DataType: ByteString
-          - Name: EventType
-            Type: PropertyType
-            DataType: NodeId
-          - Name: SourceNode
-            Type: PropertyType
-            DataType: NodeId
-          - Name: SourceName
-            Type: PropertyType
-            DataType: String
-          - Name: Time
-            Type: PropertyType
-            DataType: UtcTime
-          - Name: ReceiveTime
-            Type: PropertyType
-            DataType: UtcTime
-          - Name: Message
-            Type: PropertyType
-            DataType: LocalizedText
-          - Name: Severity
-            Type: PropertyType
-            DataType: UInt16
-      - Name: VerticalAlignment
-        Type: BaseVariableType
-        DataType: VerticalAlignment
-        ModellingRule: Optional
-        Value: 3
-      - Name: ImagePath
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        ModellingRule: Optional
-      - Name: Style
-        Type: BaseDataVariableType
-        DataType: String
-        ModellingRule: Optional
-        Value: "AastedButton"
     - Name: Enabled
       Type: BaseDataVariableType
       DataType: Boolean
-      Value: true
       Children:
       - Name: ExpressionEvaluator1
         Type: ExpressionEvaluator
@@ -243356,53 +243295,118 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../../Actual_Panel"
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 1
-    - Name: RightMargin
+    - Name: ImagePosition
+      Type: BaseDataVariableType
+      DataType: ButtonImagePosition
+      Value: 4
+    - Name: MouseClickEventHandler2
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/UICommands"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "OpenDialog"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: Dialog
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"OpenDialogDialogDescription"}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../GoTo_Left@Pointer"
+            - Name: AliasNode
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"OpenDialogAliasNodeDescription"}
+              ValueRank: ScalarOrOneDimension
+            - Name: ParentItem
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"OpenDialogParentItemDescription"}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../..@NodeId"
+          - Name: OutputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: DialogNodeId
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"OpenDialogDialogNodeIdDescription"}
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+  - Name: Right
+    Type: MomentaryButton
+    Children:
+    - Name: Active
+      Type: BaseDataVariableType
+      DataType: Boolean
+      AccessLevel: Read
+    - Name: Height
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 40.0
-    - Name: FillMode
-      Type: BaseDataVariableType
-      DataType: ImageFillModeEnum
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
       ModellingRule: Optional
-      Value: 1
-  - Name: HorizontalAlignment
-    Type: BaseVariableType
-    DataType: HorizontalAlignment
-    ModellingRule: Optional
-    Value: 1
-  - Name: TopMargin
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 20.0
-  - Name: RightMargin
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 20.0
-  - Name: Actual_Panel
-    Type: BaseDataVariableType
-    DataType: Int32
-    Value: 1
-  - Name: No_Of_Panels
-    Type: BaseDataVariableType
-    DataType: Int32
-  - Name: GoTo_Right
-    Type: BaseDataVariableType
-    DataType: NodeId
-  - Name: GoTo_Left
-    Type: BaseDataVariableType
-    DataType: NodeId
-  - Name: Image2
-    Type: Image
-    Children:
-    - Name: Path
+      Value: 40.0
+    - Name: BackgroundColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+    - Name: ImagePath
       Type: BaseDataVariableType
       DataType: ResourceUri
       Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Default_Right_ClickArrow_40x40px.png"
@@ -243418,7 +243422,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../../Right/Active"
+            Value: "../../../Active"
         - Name: TrueValue
           Type: BaseDataVariableType
           DataType: ResourceUri
@@ -243431,16 +243435,28 @@ Children:
           ReferenceType: HasParameter
           ModellingRule: Optional
           Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Default_Right_ClickArrow_40x40px.png"
-    - Name: Width
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+    - Name: Opacity
+      Type: BaseVariableType
+      DataType: Float
+      Value: 100.0
+    - Name: RightMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 40.0
-    - Name: Height
+    - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 40.0
     - Name: Enabled
       Type: BaseDataVariableType
       DataType: Boolean
@@ -243473,194 +243489,126 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../../No_Of_Panels"
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 1
-    - Name: RightMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-    - Name: Right
-      Type: MomentaryButton
+    - Name: ImagePosition
+      Type: BaseDataVariableType
+      DataType: ButtonImagePosition
+      Value: 4
+    - Name: MouseClickEventHandler2
+      Type: EventHandler
       Children:
-      - Name: Active
-        Type: BaseDataVariableType
-        DataType: Boolean
-        AccessLevel: Read
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 40.0
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 40.0
-      - Name: BackgroundColor
-        Type: BaseDataVariableType
-        DataType: Color
-        ModellingRule: Optional
-      - Name: HorizontalAlignment
-        Type: BaseVariableType
-        DataType: HorizontalAlignment
-        ModellingRule: Optional
-        Value: 3
-      - Name: Visible
-        Type: BaseDataVariableType
-        DataType: Boolean
-        ModellingRule: Optional
-        Value: true
-      - Name: Opacity
-        Type: BaseVariableType
-        DataType: Float
-        Value: 100.0
-      - Name: RightMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-      - Name: Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
         Children:
-        - Name: ExpressionEvaluator1
-          Type: ExpressionEvaluator
-          Children:
-          - Name: Expression
-            Type: BaseDataVariableType
-            DataType: String
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "{#ActualPanel}!={#No.OfPanels}&&{#No.OfPanels}>0"
-          - Name: ns=2;SourceActualPanel
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../../../Actual_Panel"
-          - Name: ns=2;SourceNo.OfPanels
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../../../No_Of_Panels"
-      - Name: ImagePosition
-        Type: BaseDataVariableType
-        DataType: ButtonImagePosition
-        Value: 4
-      - Name: MouseClickEventHandler2
-        Type: EventHandler
-        Children:
-        - Name: ListenEventType
-          Type: PropertyType
-          DataType: NodeId
-          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-        - Name: MethodsToCall
+        - Name: MethodContainer1
           Type: BaseObjectType
           Children:
-          - Name: MethodContainer1
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/UICommands"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "OpenDialog"
+          - Name: InputArguments
             Type: BaseObjectType
             Children:
-            - Name: ns=2;ObjectPointer
-              Type: NodePointer
+            - Name: Dialog
+              Type: BaseDataVariableType
               DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"OpenDialogDialogDescription"}
               Children:
-              - Name: Kind
-                Type: PropertyType
-                DataType: NodeId
-                Value: "/Types/ObjectTypes/BaseObjectType"
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "{PanelLoader_Line_Overview_Bottom}@NodeId"
-                Children:
-                - Name: Mode
-                  Type: BaseVariableType
-                  DataType: DynamicLinkMode
-                  ModellingRule: Optional
-                  Value: 2
-            - Name: ns=2;Method
+                Value: "../../../../../../GoTo_Right@Pointer"
+            - Name: AliasNode
               Type: BaseDataVariableType
-              DataType: String
-              Value: "ChangePanel"
-            - Name: InputArguments
-              Type: BaseObjectType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"OpenDialogAliasNodeDescription"}
+              ValueRank: ScalarOrOneDimension
+            - Name: ParentItem
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"OpenDialogParentItemDescription"}
               Children:
-              - Name: NewPanel
-                Type: BaseDataVariableType
-                DataType: NodeId
-                Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
-                Children:
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../../../../../GoTo_Right@Pointer"
-              - Name: AliasNode
-                Type: BaseDataVariableType
-                DataType: NodeId
-                Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
-                ValueRank: ScalarOrOneDimension
-        - Name: EventArguments
-          Type: MouseClickEvent
-          Children:
-          - Name: EventId
-            Type: PropertyType
-            DataType: ByteString
-          - Name: EventType
-            Type: PropertyType
-            DataType: NodeId
-          - Name: SourceNode
-            Type: PropertyType
-            DataType: NodeId
-          - Name: SourceName
-            Type: PropertyType
-            DataType: String
-          - Name: Time
-            Type: PropertyType
-            DataType: UtcTime
-          - Name: ReceiveTime
-            Type: PropertyType
-            DataType: UtcTime
-          - Name: Message
-            Type: PropertyType
-            DataType: LocalizedText
-          - Name: Severity
-            Type: PropertyType
-            DataType: UInt16
-      - Name: ImagePath
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        ModellingRule: Optional
-      - Name: VerticalAlignment
-        Type: BaseVariableType
-        DataType: VerticalAlignment
-        ModellingRule: Optional
-        Value: 3
-      - Name: Style
-        Type: BaseDataVariableType
-        DataType: String
-        ModellingRule: Optional
-        Value: "AastedButton"
-    - Name: FillMode
-      Type: BaseDataVariableType
-      DataType: ImageFillModeEnum
-      ModellingRule: Optional
-      Value: 1
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../..@NodeId"
+          - Name: OutputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: DialogNodeId
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Description: {"NamespaceIndex":7,"TextId":"OpenDialogDialogNodeIdDescription"}
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 1
+  - Name: TopMargin
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0
+  - Name: RightMargin
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0
+  - Name: Actual_Panel
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 1
+  - Name: No_Of_Panels
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: GoTo_Right
+    Type: BaseDataVariableType
+    DataType: NodeId
+  - Name: GoTo_Left
+    Type: BaseDataVariableType
+    DataType: NodeId
 - Name: AaLib_PageNavigator_ChangePanel
-  Id: g=cae81193f385f88056aef593f8da6c60
+  Id: g=45469d42e8568414607f6e8456bb725e
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -244271,13 +244219,630 @@ Children:
           - Name: Severity
             Type: PropertyType
             DataType: UInt16
+    - Name: FillMode
+      Type: BaseDataVariableType
+      DataType: ImageFillModeEnum
+      ModellingRule: Optional
+      Value: 1
+- Name: AaLib_PageNavigator_Machine_Part_Bottom_Panel
+  Id: g=d0da859a6bdedc266bec464e06992191
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 250.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 40.0
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"NamespaceIndex":4,"TextId":"Page {#Actual_Number}/{#No_Of_Panels}"}
+        - Name: ns=2;SourceActual_Number
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Actual_Panel"
+        - Name: ns=2;SourceNo_Of_Panels
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../No_Of_Panels"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 90.0
+    - Name: TextVerticalAlignment
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: TextHorizontalAlignment
+      Type: BaseVariableType
+      DataType: TextHorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 160.0
+  - Name: Image1
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Default_Left_ClickArrow_40x40px.png"
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../Left/Active"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Active_Left_ClickArrow_40x40px.png"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Default_Left_ClickArrow_40x40px.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: Left
+      Type: MomentaryButton
+      Children:
+      - Name: Active
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: Opacity
+        Type: BaseVariableType
+        DataType: Float
+        Value: 100.0
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{#ActualPanel}!=1"
+          - Name: ns=2;SourceActualPanel
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Actual_Panel"
+      - Name: ImagePosition
+        Type: BaseDataVariableType
+        DataType: ButtonImagePosition
+        Value: 4
+      - Name: MouseClickEventHandler2
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ns=2;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{PanelLoader_Line_Overview_Bottom}@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ns=2;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "ChangePanel"
+            - Name: InputArguments
+              Type: BaseObjectType
+              Children:
+              - Name: NewPanel
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../../../GoTo_Left@Pointer"
+              - Name: AliasNode
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
+                ValueRank: ScalarOrOneDimension
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: ImagePath
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: Optional
+      - Name: Style
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "AastedButton"
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "{#ActualPanel}!=1"
+        - Name: ns=2;SourceActualPanel
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Actual_Panel"
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: FillMode
+      Type: BaseDataVariableType
+      DataType: ImageFillModeEnum
+      ModellingRule: Optional
+      Value: 1
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 1
+  - Name: TopMargin
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0
+  - Name: RightMargin
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0
+  - Name: Actual_Panel
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 1
+  - Name: No_Of_Panels
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: GoTo_Right
+    Type: BaseDataVariableType
+    DataType: NodeId
+  - Name: GoTo_Left
+    Type: BaseDataVariableType
+    DataType: NodeId
+  - Name: Image2
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Default_Right_ClickArrow_40x40px.png"
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../Right/Active"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Active_Right_ClickArrow_40x40px.png"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "ns=4;%PROJECTDIR%/Pictures/Controls/Buttons/40px/Custom/Segmented/Button_Segmented_Default_Right_ClickArrow_40x40px.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "{#ActualPanel}!={#No.OfPanels}&&{#No.OfPanels}>0"
+        - Name: ns=2;SourceActualPanel
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Actual_Panel"
+        - Name: ns=2;SourceNo.OfPanels
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../No_Of_Panels"
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: Right
+      Type: MomentaryButton
+      Children:
+      - Name: Active
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: Opacity
+        Type: BaseVariableType
+        DataType: Float
+        Value: 100.0
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{#ActualPanel}!={#No.OfPanels}&&{#No.OfPanels}>0"
+          - Name: ns=2;SourceActualPanel
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Actual_Panel"
+          - Name: ns=2;SourceNo.OfPanels
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../No_Of_Panels"
+      - Name: ImagePosition
+        Type: BaseDataVariableType
+        DataType: ButtonImagePosition
+        Value: 4
+      - Name: MouseClickEventHandler2
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+        - Name: MethodsToCall
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Type: BaseObjectType
+            Children:
+            - Name: ns=2;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{PanelLoader_Line_Overview_Bottom}@NodeId"
+                Children:
+                - Name: Mode
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ns=2;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "ChangePanel"
+            - Name: InputArguments
+              Type: BaseObjectType
+              Children:
+              - Name: NewPanel
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Description: {"NamespaceIndex":7,"TextId":"ChangePanelNewPanelDescription"}
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../../../GoTo_Right@Pointer"
+              - Name: AliasNode
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Description: {"NamespaceIndex":7,"TextId":"ChangePanelAliasNodeDescription"}
+                ValueRank: ScalarOrOneDimension
+        - Name: EventArguments
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Type: PropertyType
+            DataType: ByteString
+          - Name: EventType
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceNode
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceName
+            Type: PropertyType
+            DataType: String
+          - Name: Time
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: ReceiveTime
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: Message
+            Type: PropertyType
+            DataType: LocalizedText
+          - Name: Severity
+            Type: PropertyType
+            DataType: UInt16
+      - Name: ImagePath
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: Optional
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: Style
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "AastedButton"
     - Name: FillMode
       Type: BaseDataVariableType
       DataType: ImageFillModeEnum
       ModellingRule: Optional
       Value: 1
 - Name: AaLib_Time_Input
-  Id: g=f24e5602992d4306c11d0e28c5fe34a4
+  Id: g=0a223b1676ac5fa6286220eb118e518d
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -244457,7 +245022,7 @@ Children:
       ModellingRule: Optional
       Value: "Input Field"
 - Name: AaLib_Time_Input_and_Switch_2State
-  Id: g=19cfdbecc0a90f50469dcae5de8c8e18
+  Id: g=f09a94e15797830b0d2dea0a90366cc4
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -244697,7 +245262,7 @@ Children:
           ModellingRule: Optional
           Value: 2
 - Name: AaLib_Checkbox_Button
-  Id: g=96050a7946ac32226f467f028d2e34ca
+  Id: g=b5fc31395959e571b95e6ab9c3086137
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -244957,7 +245522,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Int32
 - Name: AaLib_Recipe_Type
-  Id: g=9d08b5a64dee6aa9b29906b6e7517779
+  Id: g=0234bfe641b0ec042a34051369f14a9a
   Supertype: BaseObjectType
   Children:
   - Name: Recipe_Name
@@ -244977,7 +245542,7 @@ Children:
     Type: BaseDataVariableType
     DataType: DateTime
 - Name: AaLib_Machine_Setup_Type
-  Id: g=8df0236e9119811b8b12475273e07824
+  Id: g=964f2266de2bd47b7d0ee36a96f365e5
   Supertype: BaseObjectType
   Children:
   - Name: General_Machine_Setup_Direction_L_or_R
@@ -245038,7 +245603,7 @@ Children:
       DataType: NodePath
       Value: "../General_Machine_Setup_Synchronized_With_PLC"
 - Name: AaLib_Navigation_Type
-  Id: g=7d617fb91f1c8c6c98da41a34ac4ac7d
+  Id: g=6df0394caa621dcd80fac6e4cf041a5b
   Supertype: BaseObjectType
   Children:
   - Name: General_Navigation_Close_All_PopUp
@@ -245662,7 +246227,7 @@ Children:
           Type: PropertyType
           DataType: UInt16
 - Name: AaLib_System_Status_Type
-  Id: g=350d336d20281f45243f6299d0281d13
+  Id: g=4a711b65411f7741710a7b0648c5e464
   Supertype: BaseObjectType
   Children:
   - Name: General_PLC_Status_PLC_Time
@@ -245685,7 +246250,7 @@ Children:
     DataType: String
     Value: "0"
 - Name: AaLib_Dropdown_Text_And_Names_Type
-  Id: g=e0551a28923a5c3d7b3d300948eb912d
+  Id: g=115e42d8f7d90b87fa0720725194f407
   Supertype: BaseObjectType
   Children:
   - Name: Jog_Section_Selected
@@ -246089,7 +246654,7 @@ Children:
           Type: PropertyType
           DataType: UInt16
 - Name: AaLib_PopUp_Recipe
-  Id: g=4dac78579e579d3f68db405a59a4a072
+  Id: g=3def7efbae58c183c72d2224d9dd3df9
   Supertype: Dialog
   ReferenceType: HasComponent
   Children:
@@ -246957,7 +247522,7 @@ Children:
       DataType: NodeId
       Value: {"IdType":2,"Id":"2ca9cd2c672ae6d9ef1347da84f35836","Namespace":4}
 - Name: AaLib_FeedbackStatus_Bool_2States_40x100
-  Id: g=961cc22e0475d7a6579d82ebd004bfde
+  Id: g=f7e47cc58b5e32334d6d2acd6916dcca
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -247155,7 +247720,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
 - Name: AaLib_OutputField_30x80
-  Id: g=5d415e4f7620835fb0393c49b626d6e9
+  Id: g=745f1448663ca75532305a8bff29c44f
   Supertype: AaLib_OutputField
   ReferenceType: HasComponent
   Children:
@@ -247828,7 +248393,7 @@ Children:
       DataType: Boolean
       Value: true
 - Name: AaLib_OutputField_40x80
-  Id: g=4adeb03dc848611cc8989cc51fe5e1c7
+  Id: g=71fe3dd5d21b63e26fb14a14615b4d88
   Supertype: AaLib_OutputField
   ReferenceType: HasComponent
   Children:
@@ -248496,7 +249061,7 @@ Children:
       DataType: Boolean
       Value: true
 - Name: AaLib_OutputField_40x100
-  Id: g=31d222d4449f29a2bdb6a70d553c030e
+  Id: g=ef95e60df767fc8e60d0d293e247dff6
   Supertype: AaLib_OutputField
   ReferenceType: HasComponent
   Children:
@@ -249164,7 +249729,7 @@ Children:
       DataType: Boolean
       Value: true
 - Name: AaLib_OutputField_40x150
-  Id: g=4791d178e39039783300c7cb4319332a
+  Id: g=f2293d78c11137b6cd2c9826e1a1d8e3
   Supertype: AaLib_OutputField
   ReferenceType: HasComponent
   Children:
@@ -249827,7 +250392,7 @@ Children:
       DataType: Boolean
       Value: true
 - Name: AaLib_OutputField_40x200
-  Id: g=2ff0ab5231c599937c6dd4c66c43c0f4
+  Id: g=c4336d9d859c03ff1f2e98b7d0bbf308
   Supertype: AaLib_OutputField
   ReferenceType: HasComponent
   Children:
@@ -250495,7 +251060,7 @@ Children:
       DataType: Boolean
       Value: true
 - Name: AaLib_MouldInfo_11moulds_40x150
-  Id: g=cc61c76c2eb7aaaa0aab16a3fd31aa95
+  Id: g=0513787076386f32536ca9fd314456fd
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -251025,7 +251590,7 @@ Children:
     DataType: Size
     ModellingRule: Optional
 - Name: AaLib_Mould_Info_1_16x60
-  Id: g=be97d7313e005e9c7f93fabef38872ba
+  Id: g=d03295ec30418ea325d37f60f72bd9ea
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -251128,7 +251693,7 @@ Children:
     DataType: String
     Value: "0"
 - Name: AaLib_Mould_Info_1_20x60
-  Id: g=2ecaf6b5031a998920c7640c64d5009d
+  Id: g=1a44f37efe1cdf7bc76380aa81265d61
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -251240,7 +251805,7 @@ Children:
     DataType: String
     Value: "0"
 - Name: AaLib_MouldInfoColor_Border
-  Id: g=bf3644e7bc0c3019d9f79b91fc0b9ebe
+  Id: g=d4a4c7009fb0aac5ac20cf6faf1c3eac
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -251405,7 +251970,7 @@ Children:
     DataType: String
     Value: "0"
 - Name: AaLib_MouldInfo5_10x20
-  Id: g=f64e5bb080b64be2cf8ad1b851666b9a
+  Id: g=69a0bbd227dc32ab45d6f79602b9b850
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -251900,7 +252465,7 @@ Children:
     DataType: String
     Value: "0"
 - Name: AaLib_MouldInfo10_10x20
-  Id: g=81fad86500a948416a0b32665f4dbcd8
+  Id: g=2982faf5c302d1071db3263fe5506f63
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -252757,7 +253322,7 @@ Children:
     DataType: String
     Value: "0"
 - Name: AaLib_MouldInfo50_10x20
-  Id: g=3f6bc56fe91fe3ce20f2dc27b5e6ff75
+  Id: g=333dde46673c41f0aadc381c71f90764
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -257025,7 +257590,7 @@ Children:
     DataType: String
     Value: "0"
 - Name: AaLib_MouldInfoColor
-  Id: g=41e2d072387e554d6e914fa965ae3e34
+  Id: g=566024c393ba71d86307b034d6ae7be0
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -257150,7 +257715,7 @@ Children:
     DataType: String
     Value: "0"
 - Name: AaLib_MouldStaticColor_16x60
-  Id: g=ab028792dde29afeff2d363c0f838547
+  Id: g=0e82e6c815380ab7a0761492d0785f53
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -257213,7 +257778,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Int32
 - Name: AaLib_Mould_Info_1_16x60_Diagnostics
-  Id: g=f65770d0f312d776a6542c30888322f9
+  Id: g=c3953095b3c53d71c40d79714149db86
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -257293,7 +257858,7 @@ Children:
     ModellingRule: Optional
     Value: 3
 - Name: AaLib_MouldInfoColor_Diagnostics
-  Id: g=9d9150a42d0471f77031b8578216522e
+  Id: g=7a5bba79f66be351358319370f45b9fb
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -257353,7 +257918,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Int32
 - Name: AaLib_ValueState_40x85
-  Id: g=388087625ba66245f11cb9e3a10db7b3
+  Id: g=1a4d41bfa9104c114deb288061683358
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -258437,7 +259002,7 @@ Children:
       DataType: NodePath
       Value: "../Ctrl_Bits.0"
 - Name: AaLib_ValueState_60x50
-  Id: g=d2ec9d4411dd960fcd37372f8d9b5fb0
+  Id: g=a46207fa95f4349f62442ca9ba990051
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -258513,7 +259078,7 @@ Children:
     DataType: HorizontalAlignment
     ModellingRule: Optional
 - Name: AaLib_InputField
-  Id: g=9c60b9077223110ff2d5e1e8a0a148f1
+  Id: g=2d002fc97c10265624edb59da24e58f7
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -259754,7 +260319,7 @@ Children:
             DataType: NodePath
             Value: "../../../../Control_Enable (BOOL b1)"
 - Name: AaLib_InputField_String_40x100
-  Id: g=e7b0ca05e11b7540312deccf001578f8
+  Id: g=9db8c79b21ade299c35d33278c5b532a
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -259861,7 +260426,7 @@ Children:
     ModellingRule: Optional
     Value: 1
 - Name: AaLib_InputField_String_40x150
-  Id: g=f5f19a0c4ccf4bdc529197ed9e5ece4a
+  Id: g=095c116f536c8f36059a48172c96e8d5
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -259964,7 +260529,7 @@ Children:
     ModellingRule: Optional
     Value: 1
 - Name: AaLib_InputField_String_40x200
-  Id: g=9051fa25a9c8c20dd76525b29649cba7
+  Id: g=9016a0be2891ea54004845fd08c7c7ed
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -260067,7 +260632,7 @@ Children:
     ModellingRule: Optional
     Value: 1
 - Name: AaLib_InputField_40x160_AutostartTime
-  Id: g=40841f041ebf767f2dbdf2604de80b40
+  Id: g=ac9cfe73e28458f11c00ee12f8499d4e
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -260285,7 +260850,7 @@ Children:
       DataType: NodePath
       Value: "../Control_Enable"
 - Name: AaLib_InputFieldsWithStepper
-  Id: g=4b6b335504b6d2838f708b5e509e24d0
+  Id: g=ef3007acbaf84778cad4e000986c92bb
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -262028,7 +262593,7 @@ Children:
         DataType: Boolean
         ModellingRule: Optional
 - Name: AaLib_OutputField
-  Id: g=24599a2677cab6fc6fbeaf1d6ef44083
+  Id: g=c8fcee677ccc02e569f501ab3a91d7e1
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
@@ -262911,7 +263476,7 @@ Children:
       DataType: Boolean
       Value: true
 - Name: AaLib_OutputField_String_40x200
-  Id: g=875a4e264bedcf6e923da29d92250b47
+  Id: g=8f219fcf2eacd95746bb4f22e84b88cd
   Supertype: Panel
   ReferenceType: HasComponent
   Children:
