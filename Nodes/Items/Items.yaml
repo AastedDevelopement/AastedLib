@@ -7,7 +7,7 @@ Children:
   - Name: LibraryItemGuid
     Type: BaseDataVariableType
     DataType: Guid
-    Value: "34700d4fca64bc93e61970b232dc04c6"
+    Value: "1a3e8dc9dac9bce2e26de1ef167797f8"
   - Name: LibraryItemVersion
     Type: BaseDataVariableType
     DataType: UInt32
@@ -16,6 +16,7 @@ Children:
     Type: FolderType
     Children:
     - File: Alarms/Alarms.yaml
+    - File: AllCAMs/AllCAMs.yaml
     - File: Controls/Controls.yaml
     - File: Dropdown/Dropdown.yaml
     - File: Efficiency/Efficiency.yaml
@@ -23,6 +24,7 @@ Children:
     - File: Language/Language.yaml
     - File: Login/Login.yaml
     - File: Machine_Parts/Machine_Parts.yaml
+    - File: Miscs/Miscs.yaml
     - File: Model_Types/Model_Types.yaml
     - File: Others/Others.yaml
     - File: Recipes/Recipes.yaml
@@ -33,5 +35,3 @@ Children:
     - File: Template/Template.yaml
     - File: Trends/Trends.yaml
     - File: SystamStatus/SystamStatus.yaml
-    - File: AllCAMs/AllCAMs.yaml
-    - File: Misc/Misc.yaml

@@ -2,4 +2,3 @@ Name: Model Types
 Type: FolderType
 Children:
 - File: Object_Types/Object_Types.yaml
-- File: Parameter_Types/Parameter_Types.yaml

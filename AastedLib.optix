@@ -67,15 +67,15 @@ Project:
    Module: FTOptix.NetLogic
    Version: 4.0
  Statistics:
-  TotalNodeCount: 66027
+  TotalNodeCount: 66209
   Objects: 12998
   ObjectTypes: 164
-  Variables: 52863
+  Variables: 53045
   VariableTypes: 0
   DataTypes: 0
   Methods: 2
   References: 163
   ReferenceTypes: 0
-  Files: 44
+  Files: 43
  Nodes:
  - File: Nodes/AastedLib.yaml
